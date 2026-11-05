@@ -1,0 +1,137 @@
+html, body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    background-image: url("../Resources/background-index.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+main .Text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+main .Text h2{
+    display: block;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    font-family: OCRAStd;
+    font-size: clamp(2rem, 4em, 5rem);
+    z-index: 2;
+
+    animation: Entry-Text 1s ease-out 1;
+}
+
+main .Text h2 a{
+    display: inline-block;
+    align-content: center;
+    color: white;
+}
+
+main .Photo-Container{
+  width: 100%;
+  height: 100%;
+}
+
+.Letter-Glow a{
+    display:inline-block;
+    text-decoration: none;
+
+    animation: Glow-Chase 1s infinite;
+    animation-delay: calc(0.15s * var(--i));
+}
+
+.Photo{
+    position:sticky;
+    top:0;
+
+    min-width: 40vw;
+    width: auto;
+    height: 100vh;
+
+    filter: brightness(60%);
+    z-index: 1;
+    animation: Entry-Photo 1s ease-out 1;
+}
+
+@keyframes Entry-Photo{
+    0% { 
+        opacity:0;
+        filter: brightness(0%) 
+    }
+
+    100%{ 
+        opacity:1;
+        filter: brightness(60%) 
+      }
+}
+
+@keyframes Entry-Text{
+    0% { 
+        opacity: 0;
+        filter: brightness(0%) 
+    } 
+
+    100%{ 
+        opacity: 1;
+        filter: brightness(100%) 
+    }
+}
+
+@keyframes Glow-Chase {
+    0%{
+      color: white;
+    }
+
+    50% {
+      color: #00ffcc;
+      transform: translateY(-3px); 
+    }
+
+    100%{
+      color: white;
+    }
+}
+
+
+@media screen and ((max-width: 414px) and (max-height: 896px)) , (max-width: 1000px){
+    main{
+      display: flex;
+      flex-direction: column;
+    }
+
+    main .Text h2{
+      text-align: center;
+
+      color: white;
+      font-family: OCRAStd;
+      font-size: clamp(calc(3vw + 3vh), calc(4vw + 4vh), calc(6vw + 6vh) );
+
+      animation: Entry-Text 1s ease-out 1;
+    }
+
+    .Photo{
+      position: relative;
+      top: 0;
+
+      width: 100vw;
+      height: 100vh;
+
+      filter: brightness(60%);
+
+      animation: Entry-Photo 1s ease-out 1;
+    }
+}

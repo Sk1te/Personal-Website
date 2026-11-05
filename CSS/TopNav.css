@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "OCRAStd";
+    src: url("../Resources/OCRAStd.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+} /* importare font propriu */
+
+header{
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+
+.TopNav{
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    place-content: space-between;
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+    opacity: 0.75;
+    background-color: #101050;
+    animation: Entry 1s ease-out 1;
+}
+
+.TopNav div{
+    display: flex;
+    place-content: flex-start flex-start;
+}
+
+.TopNav a{
+    height: 1.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5em 0.5em;
+
+    color: white;
+    font-family: OCRAStd; /* font propriu */
+    text-align: center;
+    text-decoration: none; /* in mod normal apare underlined */
+    font-size: 1.4vw;
+}
+
+.TopNav a:hover { /* :hover la orice aplica proprietati cand treci cu mouseul peste */
+    background-color: #36454F; 
+}
+
+.TopNav img{
+    width: 2vw;
+    height: 2vw;
+}
+
+.Dropdown{ /* positie relativa fata de tot TopNav-ul si afisare in linie cu toate elementele */
+   position: relative;
+}
+
+.Dropdown .Content{
+    display: none; /* contentul este ascuns */
+
+    position: absolute;
+    top: 100%; /* offset vertical */
+
+    background-color: white;
+    opacity: 0.9;
+
+    min-width: 100%; /* marimea minima este cea a butonului */
+}
+
+.Dropdown .Content a{
+    position: relative;
+    color:black;
+    padding: 0.6em 0.6em;
+    text-decoration: none;
+    display: block;
+}
+
+.Dropdown .Content a:hover {
+    background-color: #36454F;
+    color: white;
+}
+
+.Dropdown:hover .Content { /* cand dai hover peste dropdown se afiseaza contentul */
+    display: block;
+}
+
+@keyframes Entry{
+  0% { 
+      opacity: 0;
+      filter: brightness(0%) 
+  }
+
+  100%{ 
+      opacity: 0.75;
+      filter: brightness(100%) 
+  }
+}
