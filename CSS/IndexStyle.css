@@ -1,4 +1,4 @@
-html, body {
+body {
     margin: 0;
     border: 0;
     padding: 0;
@@ -8,9 +8,11 @@ html, body {
     background-attachment: fixed;
 }
 
+
 main{
+    padding-top: 8vh;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)
 }
 
 main .Text{
