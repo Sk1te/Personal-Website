@@ -1,0 +1,66 @@
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../Resources/background-index.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    padding-top: 8vh;
+
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 5vh;
+
+    color:white;
+    font-family: OCRAStd;
+
+    animation: Entry-Text 1s ease-out 1;
+}
+
+figcaption{
+    justify-self: center;
+}
+
+p{
+    width:100vw;
+    justify-self: flex-start;
+}
+
+img{
+    height: 35vh;
+    width: 35vw;
+}
+
+.Row1{
+    grid-row: 1;
+}
+
+.Row2{
+    grid-row: 2;
+    display: flex;
+    justify-content:center;
+}
+
+.Row3{
+    grid-row: 3;
+    justify-self: center;
+}
+
+@keyframes Entry-Text{
+    0% { 
+        opacity: 0;
+        filter: brightness(0%) 
+    } 
+
+    100%{ 
+        opacity: 1;
+        filter: brightness(100%) 
+    }
+}

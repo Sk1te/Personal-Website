@@ -1,0 +1,25 @@
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../Resources/background-index.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    padding-top: 8vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 90vh;
+    width: 100vw;
+
+    color:white;
+    font-family: OCRAStd;
+
+    animation: Entry-Text 1s ease-out 1;
+}
