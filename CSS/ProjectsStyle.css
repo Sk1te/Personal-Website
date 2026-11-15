@@ -12,6 +12,7 @@ main{
     padding-top: 8vh;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -20,6 +21,7 @@ main{
 
     color:white;
     font-family: OCRAStd;
+    font-size: calc(1vw + 1vh);
 
     animation: Entry-Text 1s ease-out 1;
 }
